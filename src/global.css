@@ -147,7 +147,7 @@
     @apply hidden xl:flex flex-col w-72 2xl:w-465 px-6 py-10 gap-10  overflow-scroll custom-scrollbar;
   }
 
-  /* Post Details */
+  /* PostDetails.tsx Details */
   .post_details-container {
     @apply flex flex-col flex-1 gap-10 overflow-scroll py-10 px-5 md:p-14 custom-scrollbar items-center;
   }
@@ -204,7 +204,7 @@
     @apply flex-center flex-col p-7 h-80 lg:h-[612px];
   }
 
-  /* Grid Post List */
+  /* Grid PostDetails.tsx List */
   .grid-container {
     @apply w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-7 max-w-5xl;
   }
@@ -226,7 +226,7 @@
     @apply rounded-lg base-medium hover:bg-primary-500 transition;
   }
 
-  /* Post Card */
+  /* PostDetails.tsx Card */
   .post-card {
     @apply bg-dark-2 rounded-3xl border border-dark-4 p-5 lg:p-7 w-full max-w-screen-sm;
   }
