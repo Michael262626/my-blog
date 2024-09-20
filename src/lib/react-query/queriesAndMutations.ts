@@ -182,17 +182,19 @@ export const useSearchPosts = (searchTerm: string) => {
 };
 export const useGetPosts = () => {
     return useInfiniteQuery({
-        getNextPageParam: (lastPage: any) => {
+        // The initial parameter, could be page number, or any other identifier for first page
+        initialPageParam: 0,  // Add a suitable starting parameter (for example, 0 or 1)
 
+        getNextPageParam: (lastPage: any) => {
             if (lastPage && lastPage.documents.length === 0) {
-                return null;
+                return null; // No more pages
             }
 
             const lastId = lastPage.documents[lastPage.documents.length - 1].$id;
             return lastId;
         },
-        queryFn: getInfinitePosts as any,
-        queryKey: [QUERY_KEYS.GET_INFINITE_POSTS],
+        queryFn: getInfinitePosts as any,  // Define the function that fetches the data
+        queryKey: [QUERY_KEYS.GET_INFINITE_POSTS],  // Your query key
     });
 };
 export const useGetUsers = (limit?: number) => {

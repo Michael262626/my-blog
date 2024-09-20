@@ -119,6 +119,7 @@ export async function createPost(post: INewPost) {
         console.log(error);
     }
 }
+
 export function getFilePreview(fileId: string) {
     try {
         const fileUrl = storage.getFilePreview(
@@ -126,7 +127,7 @@ export function getFilePreview(fileId: string) {
             fileId,
             2000,
             2000,
-            "top",
+            undefined,
             100
         );
 
