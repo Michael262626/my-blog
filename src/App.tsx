@@ -9,7 +9,7 @@ import RootLayout from "./_root/RootLayout.tsx";
 import { Toaster } from "@/components/ui/toaster"
 const App = () => {
     return(
-        <main className="flex h-screen">
+        <main className="flex h-screen md:h-[calc(100vh+300px)]">
             <Routes>
                 {/* public routes */}
                 <Route element={<AuthLayout/>}>
