@@ -1,5 +1,5 @@
 
-import { ID, Query } from "appwrite";
+import {ID, ImageGravity, Query} from "appwrite";
 
 import {appwriteConfig, account, databases, avatars, storage} from "./config";
 import {INewPost, INewUser, IUpdatePost, IUpdateUser} from "@/types";
@@ -127,7 +127,7 @@ export function getFilePreview(fileId: string) {
             fileId,
             2000,
             2000,
-            'top',
+            'top' as ImageGravity,
             100
         );
 
